@@ -1,0 +1,195 @@
+/* Example Layout */
+/* Used Normalize Reset */
+
+body {font-family: helvetica, "나눔고딕", Nanum Gothic; font-size: 16px;}
+
+#wrap {width: 100%; margin: 0 auto;}
+#container {width: 80%; margin: 0 auto;}
+
+/* Heading */
+h1,h2,h3,h4,h5,h6 {margin: 0; padding: 0;}
+
+
+/* Article */
+article {padding: 1%; margin: 1% 0; background: #ccc;}
+
+/* Section Box */
+.box-1 {padding: 2%; margin: 0.2%; background: #f2f2f2;}
+section p, section span {font-size: 0.875em;}
+span.tx_att {color: #E67700}
+
+
+/*--------------- Button Elements -----------------*/
+.btn {
+	-moz-box-shadow:inset 0px 33px 0px -17px #588a29;
+	-webkit-box-shadow:inset 0px 33px 0px -17px #588a29;
+	box-shadow:inset 0px 33px 0px -17px #588a29;
+
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #356608), color-stop(1, #416b0a));
+	background:-moz-linear-gradient(top, #356608 5%, #416b0a 100%);
+	background:-webkit-linear-gradient(top, #356608 5%, #416b0a 100%);
+	background:-o-linear-gradient(top, #356608 5%, #416b0a 100%);
+	background:-ms-linear-gradient(top, #356608 5%, #416b0a 100%);
+	background:linear-gradient(to bottom, #356608 5%, #416b0a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#356608', endColorstr='#416b0a',GradientType=0);
+
+	background-color:#356608;
+	/*border:1px solid #666;*/
+	border:0;
+
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	padding:8px 20px;
+	text-decoration:none;
+
+	text-shadow:0px -1px 0px #4f8c17
+}
+.btn:hover {
+    background: #4f8c17;
+}
+.btn:active {
+    position:relative;
+    top:1px;
+}
+
+.btn2 {
+	-moz-box-shadow:inset 0px 33px 0px -17px #588a29;
+	-webkit-box-shadow:inset 0px 33px 0px -17px #588a29;
+	box-shadow:inset 0px 33px 0px -17px #588a29;
+
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #356608), color-stop(1, #416b0a));
+	background:-moz-linear-gradient(top, #356608 5%, #416b0a 100%);
+	background:-webkit-linear-gradient(top, #356608 5%, #416b0a 100%);
+	background:-o-linear-gradient(top, #356608 5%, #416b0a 100%);
+	background:-ms-linear-gradient(top, #356608 5%, #416b0a 100%);
+	background:linear-gradient(to bottom, #356608 5%, #416b0a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#356608', endColorstr='#416b0a',GradientType=0);
+
+	background-color:#356608;
+	/*border:1px solid #666;*/
+	border:0;
+
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:14px;
+	padding:8px 20px;
+	text-decoration:none;
+
+	text-shadow:0px -1px 0px #4f8c17
+}
+.btn2:hover {
+    background: #4f8c17;
+}
+.btn2:active {
+    position:relative;
+    top:1px;
+}
+
+
+[data-icon]:before {
+  font-family: icons; /* BYO icon font, mapped smartly */
+  content: attr(data-icon);
+  speak: none; /* Not to be trusted, but hey. */
+}
+
+
+/*---------------- Form Elements ------------------*/
+/* Accessible Checkbox, Radio */
+.checkbox,
+.radio {
+    /* Enable absolute positioning of the hidden form controls */
+    position:relative;
+    /* Just a bit of space. */
+    margin-bottom:0.5em;
+    /*
+    Match line-height to the height of the replacement image to ensure it
+    doesn't get clipped
+    */
+    line-height:22px;
+}
+fieldset :last-child {
+    margin-bottom:0;
+}
+/*
+Position and hide the real checkboxes and radio buttons.
+The inputs are made transparent instead of completely hidden to preserve
+clickability in browsers that don't have clickable labels, like Safari for
+iOS 5 and older.
+*/
+input[type="checkbox"],
+input[type="radio"] {
+    position:absolute;
+    /* Match the image dimensions */
+    width:22px;
+    height:22px;
+    /* Reset anything that could peek out or interfere with dimensions */
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    opacity:0;
+}
+/*
+Insert a pseudo element inside each label and give it a background
+image that will become the custom checkbox or radio button.
+Using inline-block lets you use vertical-align to adjust it vertically
+as needed.
+*/
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+    display:inline-block;
+    width:22px;
+    height:22px;
+    margin-right:4px;
+    background:url(../images/radio-checkbox.png) no-repeat;
+    content:" ";
+    vertical-align:top;
+}
+/*
+Position the background image differently depending on the state of each
+checkbox and radio button.
+*/
+input[type="radio"]:focus + label:before {
+    background-position:0 -22px;
+}
+input[type="radio"]:checked + label:before {
+    background-position:0 -44px;
+}
+input[type="radio"]:checked:focus + label:before {
+    background-position:-0 -66px;
+}
+input[type="checkbox"] + label:before {
+    background-position:0 -88px;
+}
+input[type="checkbox"]:focus + label:before {
+    background-position:0 -110px;
+}
+input[type="checkbox"]:checked + label:before {
+    background-position:0 -132px;
+}
+input[type="checkbox"]:checked:focus + label:before {
+    background-position:0 -154px;
+}
+
+/* File Upload */
+.upload {position: relative; width: 70%}
+.realupload {
+	border:1px solid;
+    position: absolute;
+    bottom: 0; right: 0;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity:0); 
+    z-index:2; /* bring the real upload interactivity up front */
+}
+form .fakeupload {
+    background: #333 url(browse.gif) no-repeat 100% 50%;
+}
+
+form .fakeupload input {
+    width: 70%;
+}
