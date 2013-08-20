@@ -1,7 +1,6 @@
 /* Example Layout */
 /* Used Normalize Reset */
-
-body {font-family: helvetica, "나눔고딕", Nanum Gothic; font-size: 16px;}
+body {font-family: helvetica, "나눔고딕", Nanum Gothic; font-size: 16px; color: #333;}
 
 #wrap {width: 100%; margin: 0 auto;}
 #container {width: 80%; margin: 0 auto;}
@@ -9,21 +8,47 @@ body {font-family: helvetica, "나눔고딕", Nanum Gothic; font-size: 16px;}
 /* Heading */
 h1,h2,h3,h4,h5,h6 {margin: 0; padding: 0;}
 
-
 /* Article */
-article {padding: 1%; margin: 1% 0; background: #ccc;}
+h1 {padding: 10px; background: #f2f2f2; color:#545649;}
+h2 {font-size: 2em; margin: 10px 10px 0 10px; line-height: 70%; color: #fff;}
+.top_info {padding: 10px 20px;}
+article {padding: 1%; margin: 1% 0; background: #ccc;
+    background: #4c4c4c;
+    background: -moz-linear-gradient(-45deg,  #4c4c4c 0%, #595959 15%, #2c2c2c 47%, #474747 78%, #2b2b2b 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#4c4c4c), color-stop(15%,#595959), color-stop(47%,#2c2c2c), color-stop(78%,#474747), color-stop(100%,#2b2b2b));
+    background: -webkit-linear-gradient(-45deg,  #4c4c4c 0%,#595959 15%,#2c2c2c 47%,#474747 78%,#2b2b2b 100%);
+    background: -o-linear-gradient(-45deg,  #4c4c4c 0%,#595959 15%,#2c2c2c 47%,#474747 78%,#2b2b2b 100%);
+    background: -ms-linear-gradient(-45deg,  #4c4c4c 0%,#595959 15%,#2c2c2c 47%,#474747 78%,#2b2b2b 100%);
+    background: linear-gradient(135deg,  #4c4c4c 0%,#595959 15%,#2c2c2c 47%,#474747 78%,#2b2b2b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#2b2b2b',GradientType=1 );
+
+}
+article, section, fieldset {-webkit-border-radius: 8px; border-radius: 8px;}
 
 /* Section Box */
-.box-1 {padding: 2%; margin: 0.2%; background: #f2f2f2;}
+section.box-1 {padding: 1.55555%; margin: 8px; background: #f6f6f6;}
 section p, section span {font-size: 0.875em;}
+
 span.tx_att {color: #E67700}
+span.tx_guide {color: #1D78BC;}
+
+fieldset {
+    margin: 0; padding: 20px; background: #fff; border-color: #D5D5D5;
+}
+label {margin-right: 8px; cursor: pointer;}
+input {outline: none;}
+
+
+
+/*--------------- CSS Lib Start ----------------*/
+
 
 
 /*--------------- Button Elements -----------------*/
 .btn {
-	-moz-box-shadow:inset 0px 33px 0px -17px #588a29;
-	-webkit-box-shadow:inset 0px 33px 0px -17px #588a29;
-	box-shadow:inset 0px 33px 0px -17px #588a29;
+	-moz-box-shadow:inset 0px 33px 0px -13px #588a29;
+	-webkit-box-shadow:inset 0px 33px 0px -13px #588a29;
+	box-shadow:inset 0px 33px 0px -13px #588a29;
 
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #356608), color-stop(1, #416b0a));
 	background:-moz-linear-gradient(top, #356608 5%, #416b0a 100%);
@@ -41,23 +66,25 @@ span.tx_att {color: #E67700}
 	color:#ffffff;
 	font-family:arial;
 	font-size:14px;
-	padding:8px 20px;
+	padding:12px 20px;
 	text-decoration:none;
 
 	text-shadow:0px -1px 0px #4f8c17
 }
-.btn:hover {
+.btn:hover, .btn:focus {
     background: #4f8c17;
 }
 .btn:active {
     position:relative;
     top:1px;
+    background: #719E05;
 }
 
+/* btn2 */
 .btn2 {
-	-moz-box-shadow:inset 0px 33px 0px -17px #588a29;
-	-webkit-box-shadow:inset 0px 33px 0px -17px #588a29;
-	box-shadow:inset 0px 33px 0px -17px #588a29;
+	-moz-box-shadow:inset 0px 33px 0px -13px #588a29;
+	-webkit-box-shadow:inset 0px 33px 0px -13px #588a29;
+	box-shadow:inset 0px 33px 0px -13px #588a29;
 
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #356608), color-stop(1, #416b0a));
 	background:-moz-linear-gradient(top, #356608 5%, #416b0a 100%);
@@ -75,12 +102,15 @@ span.tx_att {color: #E67700}
 	color:#ffffff;
 	font-family:arial;
 	font-size:14px;
-	padding:8px 20px;
+	padding:12px 20px;
 	text-decoration:none;
 
 	text-shadow:0px -1px 0px #4f8c17
+
+    -webkit-border-radius: 5px;    
+    border-radius: 5px;
 }
-.btn2:hover {
+.btn2:hover, .btn2:focus {
     background: #4f8c17;
 }
 .btn2:active {
@@ -88,7 +118,7 @@ span.tx_att {color: #E67700}
     top:1px;
 }
 
-
+/* btn3 */
 [data-icon]:before {
   font-family: icons; /* BYO icon font, mapped smartly */
   content: attr(data-icon);
@@ -96,7 +126,48 @@ span.tx_att {color: #E67700}
 }
 
 
+
 /*---------------- Form Elements ------------------*/
+/* Text Input */
+input[type=text].type1 {
+    padding: 6px 8px;
+    border: 1px solid #ccc; background: #FBFBFB;
+    -webkit-border-radius: 4px; border-radius: 4px;
+}
+input[type=text].type1:hover, input[type=text].type1:focus {
+    background: #fff;
+}
+
+input[type=text].type2 {
+    padding: 6px 8px;
+    border: 1px solid #f2f2f2; box-shadow: 0 0 3px #C0C0C0;
+    -webkit-border-radius: 4px; border-radius: 4px;
+
+}
+input[type=text].type2:hover, input[type=text].type2:focus {
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 0 5px 1px #50A6ED;
+}
+
+input[type=text].type3 {
+    padding: 6px 8px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 4px; border-radius: 4px;
+    background: #fff9ea;
+    background: -moz-linear-gradient(top,  #fff9ea 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff9ea), color-stop(100%,#ffffff));
+    background: -webkit-linear-gradient(top,  #fff9ea 0%,#ffffff 100%);
+    background: -o-linear-gradient(top,  #fff9ea 0%,#ffffff 100%);
+    background: -ms-linear-gradient(top,  #fff9ea 0%,#ffffff 100%);
+    background: linear-gradient(to bottom,  #fff9ea 0%,#ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff9ea', endColorstr='#ffffff',GradientType=0 );
+}
+input[type=text].type3:hover, input[type=text].type3:focus {
+    border: 2px solid #F37686;
+    box-shadow: 0 2px 3px #C0C0C0;
+}
+
 /* Accessible Checkbox, Radio */
 .checkbox,
 .radio {
@@ -109,6 +180,7 @@ span.tx_att {color: #E67700}
     doesn't get clipped
     */
     line-height:22px;
+    cursor: pointer;
 }
 fieldset :last-child {
     margin-bottom:0;
@@ -127,10 +199,8 @@ input[type="radio"] {
     height:22px;
     /* Reset anything that could peek out or interfere with dimensions */
     overflow:hidden;
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
+    margin:0; padding:0;
+    border:0; outline:0;
     opacity:0;
 }
 /*
@@ -147,7 +217,7 @@ input[type="radio"] + label:before {
     margin-right:4px;
     background:url(../images/radio-checkbox.png) no-repeat;
     content:" ";
-    vertical-align:top;
+    vertical-align: top;
 }
 /*
 Position the background image differently depending on the state of each
@@ -176,8 +246,9 @@ input[type="checkbox"]:checked:focus + label:before {
 }
 
 /* File Upload */
-.upload {position: relative; width: 70%}
+.upload {position: relative; width: 80%}
 .realupload {
+    width: 30%;
 	border:1px solid;
     position: absolute;
     bottom: 0; right: 0;
@@ -187,7 +258,7 @@ input[type="checkbox"]:checked:focus + label:before {
     z-index:2; /* bring the real upload interactivity up front */
 }
 form .fakeupload {
-    background: #333 url(browse.gif) no-repeat 100% 50%;
+    width: 100%; background: url(browse.gif) no-repeat 100% 50%; display: inline-block;
 }
 
 form .fakeupload input {
