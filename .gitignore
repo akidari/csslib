@@ -1,6 +1,7 @@
 # Local #
 *.sublime-workspace
 *.sublime-project
+sftp-config.json
 
 # Compiled source #
 ###################
